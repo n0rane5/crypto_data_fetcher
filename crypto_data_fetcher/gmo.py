@@ -54,7 +54,8 @@ class GmoFetcher:
             if 3600 % interval_sec != 0:
                 raise Exception('3600 % interval_sec must be 0')
 
-        today = datetime.datetime.now().date()
+        #today = datetime.datetime.now().date()
+        today = datetime.date(year=2021, month=3, day=1)
         start_year, start_month = self._find_start_year_month(market)
         date = datetime.date(start_year, start_month, 1)
 
